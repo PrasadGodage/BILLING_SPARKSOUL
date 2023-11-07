@@ -35,7 +35,7 @@ $CustName=$row1['CustName'];
 $Address=$row1['Address'];
 //-----------------------------------------------------------------
 //------------------------ Company Data ---------------------------
-$comapanyquery = "SELECT * FROM `firmmaster` where `FirmId`='2'";
+$comapanyquery = "SELECT * FROM `firmmaster` where `FirmId`='1'";
 //  echo $comapanyquery;
 $companyres = mysqli_query($con, $comapanyquery);
 $row2 = mysqli_fetch_assoc($companyres);
