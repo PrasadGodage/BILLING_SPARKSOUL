@@ -20,7 +20,7 @@ $comapanyquery = "SELECT * FROM `firmmaster` where `FirmId`='1'";
 $companyres = mysqli_query($con, $comapanyquery);
 $row2 = mysqli_fetch_assoc($companyres);
 $firmName=$row2['FirmName'];
-$firmlogo=$row2['FirmAddress'];
+$firmAddress=$row2['FirmAddress'];
 $firmMOB=$row2['FirmNo'];
 $firmEmail=$row2['FirmEmail'];
 $firmgst=$row2['FirmGst'];
@@ -48,7 +48,7 @@ $firmlogo=$row2['LogoAddress'];
                 <div class="col-9">
                    <center>
                     <h1><?php echo $firmName; ?></h1>
-                    <p><?php echo $firmlogo; ?></p>
+                    <p><?php echo $firmAddress; ?></p>
                     <p>Mobile: <?php echo $firmMOB; ?> , State: Maharashtra</p>
                    </center>
                 </div>

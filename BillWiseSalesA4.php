@@ -89,7 +89,7 @@ $firmlogo=$row2['LogoAddress'];
                         $num=1;
                                 while($row=mysqli_fetch_array($ressales))
                         {
-                            
+                          $NetTotal=$NetTotal+$row['NetTotal'];
                             ?>
                                 <tr>
                                 <td><?php echo $num; ?></td>
@@ -114,7 +114,7 @@ $firmlogo=$row2['LogoAddress'];
 
                   ?>
                   <tr>
-                    <td colspan='5' class="text-end"><b>SubTotal</b> </td>
+                    <td colspan='6' class="text-end"><b>SubTotal</b> </td>
                    
                     <td><b><?php echo $NetTotal;?></b></td>
                   </tr>
