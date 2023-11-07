@@ -69,7 +69,7 @@ $firmlogo=$row2['LogoAddress'];
                     <tr>
                         <th>#</th>
                         <th>Bill No</th>
-                        <th>Cust Name</th>
+                        <th>Customer Name</th>
                         <th>Total Amt</th>                 
                         <th>Total Tax</th>
                         <th>Taxable</th>
