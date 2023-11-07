@@ -258,6 +258,20 @@ function deleteTempsalesdata($con,$TempID)
 		  mysqli_query($con,$sql);
 }
 
+function deletesalesdtls($con,$deleteid)
+{
+		  $sql="DELETE FROM `salesdetails` WHERE `BillId`='$deleteid'";
+      echo $sql;
+		  mysqli_query($con,$sql);
+}
+function deletesales($con,$deleteid)
+{
+		  $sql="DELETE FROM `sales` WHERE `BillId`='$deleteid'";
+      echo $sql;
+		  mysqli_query($con,$sql);
+}
+
+
 function getgradenamebychildcode($con,$childcode)
 {
     $selectquery = "SELECT * FROM `gradediameteruniquecode` where `uniquecode`='$childcode'";
