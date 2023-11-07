@@ -49,7 +49,7 @@ $todate=$_GET['todate'];
             </div>
             <div class="row ">
                <div class="col d-flex justify-content-end mt-1">
-                    <b>Form: <?php echo $fromdate; ?> - TO: <?php echo $todate; ?></b>
+               <b>From: <?php echo date("d-m-Y", strtotime($fromdate)); ?> - TO: <?php echo date("d-m-Y", strtotime($todate)); ?></b>
                </div>
             </div>
             <hr>
@@ -142,7 +142,7 @@ $todate=$_GET['todate'];
                    <br>
                    <br>
                     <b>AUTHORISED SIGNATORY FOR</b>
-                    <p><?php echo getfirmname($con,2); ?></p>
+                    <p><?php echo getfirmname($con,1); ?></p>
                    </center>
                 </div>
               </div>
