@@ -20,7 +20,7 @@ $comapanyquery = "SELECT * FROM `firmmaster` where `FirmId`='1'";
 $companyres = mysqli_query($con, $comapanyquery);
 $row2 = mysqli_fetch_assoc($companyres);
 $firmName=$row2['FirmName'];
-$firmAddress=$row2['FirmAddress'];
+$firmlogo=$row2['FirmAddress'];
 $firmMOB=$row2['FirmNo'];
 $firmEmail=$row2['FirmEmail'];
 $firmgst=$row2['FirmGst'];
@@ -43,7 +43,7 @@ $firmlogo=$row2['LogoAddress'];
         <!-- <div class="container"> -->
         <div class="row">
                 <div class="col-3">
-                <img src="<?php echo $firmName; ?>" height="150px" width="200px" alt="">
+                <img src="<?php echo $firmlogo; ?>" height="150px" width="200px" alt="">
                 </div>
                 <div class="col-9">
                    <center>
