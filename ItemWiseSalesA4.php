@@ -14,6 +14,18 @@ if(!isset($_GET['fromdate']) || !isset($_GET['todate']))
 $fromdate=$_GET['fromdate'];
 $todate=$_GET['todate'];
 
+//------------------------ Company Data ---------------------------
+$comapanyquery = "SELECT * FROM `firmmaster` where `FirmId`='1'";
+//  echo $comapanyquery;
+$companyres = mysqli_query($con, $comapanyquery);
+$row2 = mysqli_fetch_assoc($companyres);
+$firmName=$row2['FirmName'];
+$firmAddress=$row2['FirmAddress'];
+$firmMOB=$row2['FirmNo'];
+$firmEmail=$row2['FirmEmail'];
+$firmgst=$row2['FirmGst'];
+$firmlogo=$row2['LogoAddress'];
+
 
 ?>
 
@@ -29,15 +41,15 @@ $todate=$_GET['todate'];
   
 
         <!-- <div class="container"> -->
-            <div class="row">
+        <div class="row">
                 <div class="col-3">
-                <img src="images/curevelogo.png" height="150px" width="200px" alt="">
+                <img src="<?php echo $firmName; ?>" height="150px" width="200px" alt="">
                 </div>
                 <div class="col-9">
                    <center>
-                    <h1><?php echo getfirmname($con,1); ?></h1>
-                    <p><?php echo getfirmAddress($con,1); ?></p>
-                    <p>Mobile: <?php echo getFirmMob($con,1); ?> , State: Maharashtra</p>
+                    <h1><?php echo $firmName; ?></h1>
+                    <p><?php echo $firmlogo; ?></p>
+                    <p>Mobile: <?php echo $firmMOB; ?> , State: Maharashtra</p>
                    </center>
                 </div>
             </div>
@@ -142,7 +154,7 @@ $todate=$_GET['todate'];
                    <br>
                    <br>
                     <b>AUTHORISED SIGNATORY FOR</b>
-                    <p><?php echo getfirmname($con,1); ?></p>
+                    <p><?php echo $firmName; ?></p>
                    </center>
                 </div>
               </div>
