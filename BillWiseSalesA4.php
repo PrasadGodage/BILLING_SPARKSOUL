@@ -35,9 +35,9 @@ $todate=$_GET['todate'];
                 </div>
                 <div class="col-9">
                    <center>
-                    <h1><?php echo getfirmname($con,2); ?></h1>
-                    <p><?php echo getfirmAddress($con,2); ?></p>
-                    <p>Mobile: <?php echo getFirmMob($con,2); ?> , State: Maharashtra</p>
+                    <h1><?php echo getfirmname($con,1); ?></h1>
+                    <p><?php echo getfirmAddress($con,1); ?></p>
+                    <p>Mobile: <?php echo getFirmMob($con,1); ?> , State: Maharashtra</p>
                    </center>
                 </div>
             </div>
