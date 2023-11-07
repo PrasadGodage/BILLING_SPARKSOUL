@@ -123,7 +123,7 @@ function increamenttempbillvalue($con)
 }
 
 function getprefix($con) {
-  $selectquery = "SELECT * FROM `firmmaster` where `FirmId`='2'";
+  $selectquery = "SELECT * FROM `firmmaster` where `FirmId`='1'";
   // echo $selectquery;
   $prefixname="No Record Found";
 $result = mysqli_query($con, $selectquery);
